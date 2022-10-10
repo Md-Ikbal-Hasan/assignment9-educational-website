@@ -1,33 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <NavLink className="navbar-brand fw-bold" to="/">Quize</NavLink>
-
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        <li className="nav-item">
-                            <NavLink className="nav-link " to="/">Topics</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/statistics">Statistics</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/blog">Blog</NavLink>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
+        <div className='text-center'>
+            <img src="https://media.istockphoto.com/vectors/quiz-time-banner-with-colorful-brush-strokes-vector-id1031369974?k=20&m=1031369974&s=170667a&w=0&h=Bh2IzCU5XrDx73zLWp8HFrwYkL3GaHDocV-QhnWB6ug=" alt="" className='w-50 mb-5' />
+        </div>
     );
 };
 

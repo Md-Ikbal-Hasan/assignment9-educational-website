@@ -1,7 +1,5 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## A summary about this project
+# A summary about this project
 
 - This is a basic quize application. It is developed using react. There are several categories quize topic like css,react,git etc. Every categories has many quize. If you choose a correct answer it will show the message and same as wrong answer.You can see the right answer by clicking the view icon
 
@@ -15,4 +13,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     3. react-icons
     4. rechart
     5. toastify
-- live site link : https://www.w3schools.com/
+## live site link : https://www.w3schools.com/

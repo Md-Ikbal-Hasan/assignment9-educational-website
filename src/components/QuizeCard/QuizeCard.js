@@ -5,6 +5,7 @@ const QuizeCard = ({ quize }) => {
     console.log(quize);
     const { logo, name, total, id } = quize;
     return (
+
         <div className="col">
             <div className="card shadow-lg border-0">
                 <img src={logo} className="card-image " alt="..." />
@@ -21,6 +22,10 @@ const QuizeCard = ({ quize }) => {
                 </div>
             </div>
         </div >
+
+
+
+
     );
 };
 

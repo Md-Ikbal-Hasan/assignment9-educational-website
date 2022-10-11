@@ -3,7 +3,7 @@ import { FaRegEye } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const SingleQuize = ({ que }) => {
+const SingleQuize = ({ que, setCount, count, total }) => {
     const { id, question, correctAnswer, options } = que;
     // console.log(que);
 
@@ -13,9 +13,15 @@ const SingleQuize = ({ que }) => {
 
     const quizeResult = (message) => toast(message);
 
+    let marks = 0;
+
     const quizeEvaluation = (userAns) => {
         if (userAns === correctAnswer) {
             quizeResult("Right Answer!");
+            if (count < total) {
+                setCount(count + 1);
+            }
+
         } else {
             quizeResult("Wrong Answer!");
         }
@@ -37,7 +43,7 @@ const SingleQuize = ({ que }) => {
                         {
                             options.map((op, idx) => {
                                 return (
-                                    <div className='mb-2' key={idx}>
+                                    <div className='mb-2 d-flex' key={idx}>
                                         <input type="radio" name={id} onClick={() => quizeEvaluation(op)} />
                                         <label htmlFor=""> {op} </label>
                                     </div>

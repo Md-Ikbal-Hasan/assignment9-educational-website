@@ -9,8 +9,6 @@ const Home = () => {
     return (
         <div className='container mb-5'>
             <Header></Header>
-
-
             <div className="row row-cols-1 row-cols-md-4 row-cols-1 g-4">
                 {
                     quizes.map(quize => <QuizeCard
@@ -20,8 +18,6 @@ const Home = () => {
                     </QuizeCard>)
                 }
             </div>
-
-
         </div>
     );
 };

@@ -13,4 +13,4 @@
     3. react-icons
     4. rechart
     5. toastify
-## live site link : https://www.w3schools.com/
+## live site link : https://react-quize-application.netlify.app/

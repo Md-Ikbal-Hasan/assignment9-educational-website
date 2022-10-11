@@ -1,24 +1,30 @@
 import React from 'react';
-import Option from '../Option/Option';
 import { FaRegEye } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SingleQuize = ({ que }) => {
     const { id, question, correctAnswer, options } = que;
     // console.log(que);
 
-    const showCorrectAnsware = () => {
-        alert("Right answere is: " + correctAnswer);
-    }
+
+
+    const showCorrectAnsware = () => toast("Correct Answar is: " + correctAnswer);
+
+    const quizeResult = (message) => toast(message);
+
     const quizeEvaluation = (userAns) => {
         if (userAns === correctAnswer) {
-            alert("Right ans")
+            quizeResult("Right Answer!");
         } else {
-            alert("Wrong ans")
+            quizeResult("Wrong Answer!");
         }
     }
 
     return (
         <div className='col'>
+            <ToastContainer position="top-center" autoClose={2000} closeOnClick></ToastContainer>
+
             <div className='card shadow-lg'>
                 <div className='card-body'>
 
@@ -29,7 +35,6 @@ const SingleQuize = ({ que }) => {
 
                     <div className='card-text'>
                         {
-                            // options.map((op, idx) => <Option key={idx} op={op}></Option>)
                             options.map((op, idx) => {
                                 return (
                                     <div className='mb-2' key={idx}>
